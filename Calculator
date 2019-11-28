@@ -10,7 +10,7 @@ public class Calculator {
 		Pilha<Character> pilhaCa = new Pilha<Character>();
 		Pilha<Character> pilhaCb = new Pilha<Character>();
 		Scanner teclado = new Scanner(System.in);	
-		System.out.println("Informe a equação com parênteses:");
+		System.out.println("Informe a equação entre os parênteses:");
 		String equation = teclado.nextLine();		
 		while (a < equation.length()) {			
 		if (equation.charAt(a) == '(') {b = 0; pilhaDb.push(x);}			
@@ -70,7 +70,7 @@ public class Calculator {
 			b = 1;				
 		}			
 		else if (equation.charAt(a) == '0' || equation.charAt(a) == '1' || equation.charAt(a) == '2' || equation.charAt(a) == '3' || equation.charAt(a) == '4' || equation.charAt(a) == '5' || equation.charAt(a) == '6' || equation.charAt(a) == '7' || equation.charAt(a) == '8' || equation.charAt(a) == '9'){pilhaCb.push(equation.charAt(a));}			
-		else {System.out.println("Por favor, insira apenas número inteiros e os operadores informados no manual."); break;}			
+		else {System.out.println("Por favor, insira apenas números inteiros que estejam entre os parênteses: "); break;}			
 		a++;						
 	}
 		System.out.println(x);
